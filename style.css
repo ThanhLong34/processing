@@ -1,0 +1,107 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 16px;
+   font-family: 'cascadia code';
+}
+
+ul {
+   list-style-type: none;
+}
+body {
+   padding: 30px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: rgb(255, 210, 189);
+}
+.heading {
+   font-size: 2rem;
+   text-align: center;
+   margin-top: 20px;
+}
+.list {
+   margin-top: 50px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.item {
+   margin-top: 20px;
+   color: black;
+   text-align: center;
+   position: relative;
+}
+.item + .item {
+   margin-left: 10px;
+}
+.item__outer,
+.item__inner {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.item__outer {
+   width: 200px;
+   height: 200px;
+   border-radius: 100%;
+   background-color: green;
+   box-shadow: 0 0 5px black;
+}
+.item__inner {
+   width: 80%;
+   height: 80%;
+   border-radius: 100%;
+   background-color: rgb(255, 210, 189);
+   box-shadow: inset 0 0 5px black;
+   color: black;
+   text-shadow: 0 0 5px black;
+}
+.item__icon {
+   font-size: 2rem;
+}
+.item__text {
+   margin-top: 5px;
+   font-size: 1.2rem;
+}
+.item__percent {
+   margin-top: 5px;
+   font-size: 2.6rem;
+}
+.item__svg {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   transform: rotateZ(-90deg);
+}
+.item__circle {
+   fill: none;
+   stroke: orange;
+   stroke-width: 20px;
+   stroke-dasharray: 565;
+   stroke-dashoffset: 565;
+   animation: animate linear 4s forwards;
+}
+#text {
+   margin-top: 20px;
+   font-size: 2rem;
+}
+@keyframes animate {
+   100% {
+      opacity: 1;
+   }
+}
+#text span {
+   opacity: 0;
+   animation: animate ease 0.5s forwards;
+}
+.hidden {
+   display: none !important;
+}
